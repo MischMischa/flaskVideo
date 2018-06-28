@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    {% for video in videos %}
+    <div class="col-md-4">
+        <div class="thumbnail">
+            <a href={{video}}>
+                <video src={{video}}  class="img-rounded" width="50%"/>
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

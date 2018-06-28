@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4 text-center">
+            <h1>Upload files</h1>
+            <img src="/static/img/upload.png" width="100%" height="80%" class="img-rounded">
+        </div>
+    </div>
+    <div class="row">
+        <form method="post" action="/upload_image" enctype=multipart/form-data>>
+            <div class="btn-group-vertical col-sm-4 text-center">
+                <input type="file" class="btn btn-success btn-block" value="file" name="file"/>
+                <input type="submit" class="btn btn-primary btn-block" value="upload" name="upload"/>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
